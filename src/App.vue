@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <Days ref="days"></Days>
+    <b-container>
+      <Days ref="days"></Days>
+    </b-container>
   </div>
 </template>
 
@@ -14,7 +16,7 @@ export default {
   },
   methods: {
     loop () {
-      let refs = this.refs
+      let refs = this.$refs
       refs.days.decrement()
     }
   }
