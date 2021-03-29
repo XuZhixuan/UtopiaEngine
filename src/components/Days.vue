@@ -2,13 +2,13 @@
   <div>
     <b-card>
       <b-card-body>
+        还有{{ days }}天
         <b-progress
           :value="days"
           :max="max"
           animated
           :variant="state"
         ></b-progress>
-        <b-card-text> 还有{{ days }}天 </b-card-text>
       </b-card-body>
     </b-card>
   </div>
@@ -24,12 +24,12 @@ export default {
     };
   },
   methods: {
-    increment() {
-      ++this.days > this.max ? this.days = this.max : {}
+    increment(i=1) {
+      this.days += i > this.max ? this.days = this.max : null
       this.submit()
     },
-    decrement() {
-      --this.days < 0 ? this.days = 0 : {}
+    decrement(i=1) {
+      this.days -= i < 0 ? this.days = 0 : null
       this.submit()
     },
     submit () {
