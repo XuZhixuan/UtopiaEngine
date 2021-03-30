@@ -10,12 +10,21 @@ export default new Vuex.Store({
     days: {
       num: 0,
       status: false
+    },
+    inventories: {
+      componets: {},
+      devices: {},
+      treasures: {},
+      tools: {}
     }
   },
   mutations: {
     changeDays (state, payload) {
       state.days = payload
-    }
+    },
+    // changeInventories (state, payload) {
+
+    // }
   },
   actions: {
     //
