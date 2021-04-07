@@ -3,6 +3,14 @@
 ## [Unreleased]
 Finish the game
 
+## [0.0.2] - 2021-04-07
+### Added
+- 添加核心组件探险色子投掷器
+- 背包组件添加图标
+
+### Fixed
+- 修复 dice() 返回值范围为 0-6 的错误
+
 ## [0.0.2] - 2021-03-30
 ### Added
 - 添加 Vue router

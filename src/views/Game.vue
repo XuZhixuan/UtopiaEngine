@@ -13,7 +13,11 @@
     <div class="core">
       <b-card no-body>
         <b-tabs>
-          <b-tab active title="冒险"></b-tab>
+          <b-tab active title="冒险">
+            <b-card-group deck>
+              <Dice @filled="finishExp"></Dice>
+            </b-card-group>
+          </b-tab>
           <b-tab title="背包">
             <Inventory></Inventory>
           </b-tab>
@@ -27,6 +31,7 @@
 <script>
 import Days from "@/components/Days";
 import Life from "@/components/Life";
+import Dice from "@/components/Dice";
 
 import Inventory from '@/components/Inventory'
 
@@ -35,6 +40,7 @@ export default {
   components: {
     Days,
     Life,
+    Dice,
     Inventory
   },
   methods: {
@@ -42,6 +48,9 @@ export default {
       let refs = this.$refs;
       refs.days.decrement();
     },
+    finishExp (result) {
+      console.log(result)
+    }
   },
 };
 </script>
